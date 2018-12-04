@@ -54,7 +54,7 @@ b = gjennomsnitt(b_1)
 
 x_1 = []
 y_1 = []
-for i in range(0,11):
+for i in range(x[0]-1,x.__len__()+1):
     y_1.append(a*i+b)
     x_1.append(i)
     
