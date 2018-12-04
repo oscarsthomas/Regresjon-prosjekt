@@ -8,10 +8,8 @@ kolonnenavn = list(xy)
 navnx = kolonnenavn[0]
 navny = kolonnenavn[1]
 
-
 x_1 = xy.groupby(navnx)[navnx].apply(lambda x: list(x)).tolist()
 y_1 = xy.groupby(navny)[navny].apply(lambda x: list(x)).tolist()
-
 
 x = []
 y = []
@@ -21,16 +19,7 @@ for i in range(0, x_1.__len__()):
     b = y_1[i]
     x.append(a[0])
     y.append(b[0])
-
-'''
-i = 0
-while i <= 10:
-    x.append(i)
-    y.append(i + 1)
-    i = i + 1
-''' 
-
-
+ 
 
 def stigningToPunkt(x,y):
     a = []
