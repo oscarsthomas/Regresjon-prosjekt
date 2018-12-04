@@ -1,9 +1,16 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-xy = pd.read_csv('sjekk.csv')
+csv = input('Hva er navnet på csv filen? Ta med .csv på slutten: ')
 
-x_1 = xy.groupby('x')['x'].apply(lambda x: list(x)).tolist()
-y_1 = xy.groupby(' y')[' y'].apply(lambda x: list(x)).tolist()
+xy = pd.read_csv(csv)
+
+kolonnenavn = list(xy)
+navnx = kolonnenavn[0]
+navny = kolonnenavn[1]
+
+
+x_1 = xy.groupby(navnx)[navnx].apply(lambda x: list(x)).tolist()
+y_1 = xy.groupby(navny)[navny].apply(lambda x: list(x)).tolist()
 
 
 x = []
