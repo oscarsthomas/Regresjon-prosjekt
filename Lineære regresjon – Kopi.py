@@ -62,5 +62,8 @@ plt.plot(x_1, y_1)
    
 
 plt.plot(x, y, 'ro')
+plt.xlabel('x-akse')
+plt.ylabel('y-akse')
+plt.title('Lineær regresjon')
 plt.grid(True)
 plt.show()
