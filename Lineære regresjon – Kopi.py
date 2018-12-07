@@ -24,8 +24,8 @@ for i in range(0, x_1.__len__()):
 def stigningToPunkt(x,y):
     a = []
     b = x.__len__()
-    for j in range(0, b-1):
-        for i in range(0, b-1):
+    for j in range(0, b):
+        for i in range(0, b):
             q = (y[j]-x[j])/(y[i]-x[i])
             a.append(q)
     return a
@@ -33,14 +33,14 @@ def stigningToPunkt(x,y):
 def gjennomsnitt(x):
     g = 0
     a = x.__len__()
-    for i in range(0,a-1):
+    for i in range(0,a):
         g = g + x[i]
     g = g/(a-1)
     return g
 
 def konstantledd(a, x, y):
     b = []
-    for i in range(0,y.__len__()-1):
+    for i in range(0,y.__len__()):
         q = y[i] - a*x[i]
         b.append(q)
     return b
