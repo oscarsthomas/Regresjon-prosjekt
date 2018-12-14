@@ -14,11 +14,13 @@ y_1 = xy.groupby(navny)[navny].apply(lambda x: list(x)).tolist()
 x = []
 y = []
 
-for i in range(0, x_1.__len__()):
+i = 0
+while i < x_1.__len__():
     a = x_1[i]
     b = y_1[i]
     x.append(a[0])
     y.append(b[0])
+    i = i + 1
  
 
 def stigningToPunkt(x,y):
@@ -26,7 +28,7 @@ def stigningToPunkt(x,y):
     b = x.__len__()
     for j in range(0, b):
         for i in range(0, b):
-            q = (y[j]-x[j])/(y[i]-x[i])
+            q = (y[j]-y[i])/(x[j]-x[i])
             a.append(q)
     return a
 
@@ -52,11 +54,14 @@ b_1 = konstantledd(a, x, y)
 b = gjennomsnitt(b_1)
 
 
-x_1 = []
-y_1 = []
-for i in range(x[0]-1,x.__len__()+1):
+x_2 = []
+y_2 = []
+z = x[0]-1
+q = x[x.__lenn()-1]
+while i < q+2:
     y_1.append(a*i+b)
     x_1.append(i)
+    i = i + 1
     
 plt.plot(x_1, y_1)
    
