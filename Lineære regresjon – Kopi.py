@@ -58,7 +58,7 @@ x_2 = []
 y_2 = []
 z = x[0]-1
 q = x[x.__len__()-1]
-while i < q+2:
+while z < q+2:
     y_1.append(a*i+b)
     x_1.append(i)
     i = i + 1
