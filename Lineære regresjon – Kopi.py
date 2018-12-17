@@ -61,7 +61,7 @@ q = x[x.__len__()-1]
 while z < q+2:
     y_1.append(a*i+b)
     x_1.append(i)
-    i = i + 1
+    z = z + 1
     
 plt.plot(x_1, y_1)
    
